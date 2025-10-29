@@ -22,8 +22,8 @@ class Customer:
 
     def distance_to(self, target: Tuple[int, int]) -> float:
         return sqrt(
-            (self.location[0] - target[0]) ** 2 +
-            (self.location[1] - target[1]) ** 2
+            (self.location[0] - target[0]) ** 2
+            + (self.location[1] - target[1]) ** 2
         )
 
     def trip_cost(self, shop: Shop, fuel_price: float) -> float:

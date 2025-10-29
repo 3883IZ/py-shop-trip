@@ -1,6 +1,3 @@
-from typing import Tuple
-
-
 class Car:
     def __init__(self, brand: str, fuel_consumption: float) -> None:
         self.brand = brand
@@ -8,3 +5,4 @@ class Car:
 
     def fuel_cost(self, distance: float, fuel_price: float) -> float:
         return (distance / 100) * self.fuel_consumption * fuel_price
+
