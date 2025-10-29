@@ -1,4 +1,4 @@
-from typing import Dict, Tuple, List
+from typing import Dict, Tuple
 from math import sqrt
 from app.car import Car
 from app.shop import Shop

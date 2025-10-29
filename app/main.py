@@ -1,11 +1,13 @@
 import json
+import os
 from app.car import Car
 from app.customer import Customer
 from app.shop import Shop
 
 
 def shop_trip() -> None:
-    with open("config.json", "r", encoding="utf-8") as file:
+    config_path = os.path.join(os.path.dirname(__file__), "config.json")
+    with open(config_path, "r", encoding="utf-8") as file:
         config = json.load(file)
 
     fuel_price = config["FUEL_PRICE"]
@@ -50,7 +52,9 @@ def shop_trip() -> None:
                 customer.go_home()
                 customer.money -= cost
                 print(f"{customer.name} rides home")
-                print(f"{customer.name} now has {customer.money:.2f} dollars\n")
+                print(
+                    f"{customer.name} now has {customer.money:.2f} dollars\n"
+                )
                 break
         else:
             print(
