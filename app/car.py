@@ -5,4 +5,3 @@ class Car:
 
     def fuel_cost(self, distance: float, fuel_price: float) -> float:
         return (distance / 100) * self.fuel_consumption * fuel_price
-
